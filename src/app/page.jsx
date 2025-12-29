@@ -1,6 +1,6 @@
 'use client';
 
-import { Hero, Stats, AboutPreview, ServicesPreview, FeaturedProjects, LayoutContent } from '../components/sections';
+import { Hero, AboutPreview, ServicesPreview, FeaturedProjects, LayoutContent } from '../components/sections';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Link from 'next/link';

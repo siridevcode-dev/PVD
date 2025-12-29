@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FaHardHat, FaBuilding, FaLeaf, FaUsers, FaHandHoldingHeart, FaExchangeAlt, FaWater, FaHome, FaArrowRight, FaCheckCircle, FaComments, FaHeartbeat, FaClipboardCheck, FaTruck } from 'react-icons/fa';
+import { FaHardHat, FaBuilding, FaLeaf, FaUsers, FaHandHoldingHeart, FaExchangeAlt, FaWater, FaHome, FaArrowRight, FaCheckCircle, FaComments, FaClipboardCheck, FaTruck } from 'react-icons/fa';
 
 const services = [
     { key: 'newSite', slug: 'new-site', icon: <FaHome />, image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' },
@@ -39,7 +39,16 @@ const ServicesPage = () => {
             {/* Half-height Hero Section */}
             <section className="relative min-h-[50vh] flex items-center justify-center bg-primary-900 text-white overflow-hidden pt-20">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` }} />
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                        poster="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    >
+                        <source src="/videos/services-bg.mp4" type="video/mp4" />
+                    </video>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/70" />
                 </div>
                 <div className="container-custom relative z-10 text-center">

@@ -2,7 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FaLeaf, FaUsers, FaBalanceScale, FaCheckCircle, FaGlobe, FaFlag, FaComments, FaClipboardCheck, FaHandshake, FaShieldAlt } from 'react-icons/fa';
+import { FaLeaf, FaUsers, FaCheckCircle, FaGlobe, FaFlag, FaComments, FaClipboardCheck, FaHandshake, FaShieldAlt } from 'react-icons/fa';
 
 const SustainabilityPage = () => {
     const { t, i18n } = useTranslation();
@@ -33,7 +33,16 @@ const SustainabilityPage = () => {
             {/* Half-height Hero Section */}
             <section className="relative min-h-[50vh] flex items-center justify-center bg-primary-900 text-white overflow-hidden pt-20">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` }} />
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                        poster="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    >
+                        <source src="/videos/sustainability-bg.mp4" type="video/mp4" />
+                    </video>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/70" />
                 </div>
                 <div className="container-custom relative z-10 text-center">

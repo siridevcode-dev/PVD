@@ -1,8 +1,10 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const layoutItems = [
     {
@@ -57,7 +59,19 @@ const layoutItems = [
 
 const LayoutContent = () => {
     const { i18n } = useTranslation();
+    const [mounted, setMounted] = useState(false);
+
+    // Derive isLao from i18n
     const isLao = i18n.language === 'la';
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return <div className="py-20 bg-gray-100 min-h-[600px]" />;
+    }
 
     return (
         <section className="py-20 bg-gray-100">
@@ -89,10 +103,11 @@ const LayoutContent = () => {
                         viewport={{ once: true }}
                         className="col-span-2 row-span-1 group relative rounded-2xl overflow-hidden cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={layoutItems[0].image}
                             alt={isLao ? layoutItems[0].titleLa : layoutItems[0].titleEn}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -113,10 +128,11 @@ const LayoutContent = () => {
                         transition={{ delay: 0.1 }}
                         className="col-span-1 row-span-2 group relative rounded-2xl overflow-hidden cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={layoutItems[1].image}
                             alt={isLao ? layoutItems[1].titleLa : layoutItems[1].titleEn}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -137,10 +153,11 @@ const LayoutContent = () => {
                         transition={{ delay: 0.2 }}
                         className="col-span-1 row-span-1 group relative rounded-2xl overflow-hidden cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={layoutItems[2].image}
                             alt={isLao ? layoutItems[2].titleLa : layoutItems[2].titleEn}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -162,10 +179,11 @@ const LayoutContent = () => {
                         transition={{ delay: 0.3 }}
                         className="col-span-1 row-span-1 group relative rounded-2xl overflow-hidden cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={layoutItems[3].image}
                             alt={isLao ? layoutItems[3].titleLa : layoutItems[3].titleEn}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -186,10 +204,11 @@ const LayoutContent = () => {
                         transition={{ delay: 0.4 }}
                         className="col-span-1 row-span-1 group relative rounded-2xl overflow-hidden cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={layoutItems[4].image}
                             alt={isLao ? layoutItems[4].titleLa : layoutItems[4].titleEn}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -210,10 +229,11 @@ const LayoutContent = () => {
                         transition={{ delay: 0.5 }}
                         className="col-span-1 row-span-1 group relative rounded-2xl overflow-hidden cursor-pointer"
                     >
-                        <img
+                        <Image
                             src={layoutItems[5].image}
                             alt={isLao ? layoutItems[5].titleLa : layoutItems[5].titleEn}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">

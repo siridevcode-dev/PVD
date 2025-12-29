@@ -82,7 +82,16 @@ const AboutPage = () => {
             {/* Hero Section - Compact */}
             <section className="relative min-h-[40vh] flex items-center justify-center bg-primary-900 text-white overflow-hidden pt-20">
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')` }} />
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                        poster="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    >
+                        <source src="/videos/about-bg.mp4" type="video/mp4" />
+                    </video>
                     <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/70" />
                 </div>
                 <div className="container-custom relative z-10 text-center">

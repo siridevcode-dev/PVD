@@ -64,7 +64,7 @@
         },
         "trackRecord": {
             "title": "Successful Track Record",
-            "nn2": "Nam Ngiep 2 (NN2) - 1,053 Households",
+            "nn2": "Nam Ngum 2 (NN2) - 1,053 Households",
             "xhpp": "Xayaburi HPP (XHPP) - 663 Households",
             "lphpp": "Luang Prabang HPP (LPHPP) - 1,593 Households (Ongoing)"
         }
@@ -116,9 +116,9 @@
         "viewGallery": "View Project Gallery",
         "items": {
             "nn2": {
-                "title": "Nam Ngiep 2 Hydropower Project (NN2)",
-                "client": "Nam Ngiep 2 Power Company Limited",
-                "location": "Bolikhamxay Province, Lao PDR",
+                "title": "Nam Ngum 2 Hydropower Project (NN2)",
+                "client": "Nam Ngum 2 Power Company Limited",
+                "location": "Vientiane Province, Lao PDR",
                 "role": "End-to-end RAP/LIRP Management (LSTK)",
                 "scope": "1,053 Households resettled",
                 "description": "Comprehensive resettlement program including new site construction, infrastructure development, and livelihood restoration for affected communities.",
@@ -448,7 +448,7 @@
         },
         "categories": {
             "all": "All",
-            "nn2": "Nam Ngiep 2 (NN2)",
+            "nn2": "Nam Ngum 2 (NN2)",
             "xhpp": "Xayaburi Hydroelectric Power Project (XHPP)",
             "lphpp": "Luang Prabang HPP (LPHPP)"
         },

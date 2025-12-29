@@ -9,10 +9,10 @@ export const projects = {
         image: '/images/projects/nn2.jpg',
         gallery: [], // Populated dynamically or defined in gallery.js if preferred, but for now we'll fetch from gallery.js by ID/Category
         category: 'resettlement', // Key for translation 'projects.categories.x'
-        titleEn: 'Nam Ngiep 2 Hydropower Project (NN2)',
-        titleLa: 'ໂຄງການໄຟຟ້ານ້ຳງຽບ 2 (NN2)',
-        locationEn: 'Bolikhamxay Province, Lao PDR',
-        locationLa: 'ແຂວງບໍລິຄຳໄຊ, ສປປ ລາວ',
+        titleEn: 'Nam Ngum 2 Hydropower Project (NN2)',
+        titleLa: 'ໂຄງການໄຟຟ້ານ້ຳງື່ມ 2 (NN2)',
+        locationEn: 'Vientiane Province, Lao PDR',
+        locationLa: 'ແຂວງວຽງຈັນ, ສປປ ລາວ',
         year: '2011-2015',
         familiesAffected: 1053,
         villagesResettled: 5,
@@ -29,7 +29,7 @@ export const projects = {
     },
     xhpp: {
         id: 'xhpp',
-        image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+        image: '/images/xayaburi-dam.png',
         category: 'resettlement',
         titleEn: 'Xayaburi Hydroelectric Power Project (XHPP)',
         titleLa: 'ໂຄງການໄຟຟ້າໄຊຍະບູລີ (XHPP)',
@@ -51,7 +51,7 @@ export const projects = {
     },
     lphpp: {
         id: 'lphpp',
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+        image: '/images/projects/lphpp.jpg',
         category: 'resettlement',
         titleEn: 'Luang Prabang Hydropower Project (LPHPP)',
         titleLa: 'ໂຄງການໄຟຟ້າຫຼວງພະບາງ (LPHPP)',

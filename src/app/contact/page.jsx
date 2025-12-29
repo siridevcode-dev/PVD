@@ -87,7 +87,7 @@ const ContactPage = () => {
                                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-12">
                                         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><FaPaperPlane className="text-green-500 text-2xl" /></div>
                                         <h4 className="text-xl font-semibold text-primary-800 mb-2">Message Sent!</h4>
-                                        <p className="text-gray-600">Thank you for contacting us. We'll get back to you soon.</p>
+                                        <p className="text-gray-600">Thank you for contacting us. We&apos;ll get back to you soon.</p>
                                         <button onClick={() => setSubmitted(false)} className="btn btn-primary mt-6">Send Another Message</button>
                                     </motion.div>
                                 ) : (

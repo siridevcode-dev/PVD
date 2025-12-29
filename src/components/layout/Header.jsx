@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,7 +12,13 @@ const Header = () => {
     const { t, i18n } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const pathname = usePathname();
+
+    useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Intentional hydration pattern for client-side rendering
+        setMounted(true);
+    }, []);
 
     // Ensure i18n is initialized client-side if needed, though Layout handles it.
 
@@ -52,7 +59,14 @@ const Header = () => {
             <div className="container-custom">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-3">
-                        <img src="/images/logo.png" alt="Phornsavarn" className="h-12 w-auto" />
+                        <Image
+                            src="/images/logo.png"
+                            alt="Phornsavarn"
+                            width={200}
+                            height={100}
+                            priority
+                            className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-24'}`}
+                        />
                     </Link>
 
                     <nav className="hidden lg:flex items-center gap-6">
@@ -72,7 +86,7 @@ const Header = () => {
                             onClick={toggleLanguage}
                             className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium transition-colors"
                         >
-                            {i18n.language === 'en' ? 'ລາວ' : 'EN'}
+                            {mounted ? (i18n.language === 'en' ? 'ລາວ' : 'EN') : '...'}
                         </button>
 
                         <button
